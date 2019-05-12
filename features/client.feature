@@ -1,7 +1,7 @@
 Feature: Client Feature
 
   Scenario: Prestamos con garantias y avales
-    Given los datos entrada obtenidos de "clientes.csv"
+    Given los datos entrada obtenidos de "./data/clientes.csv" con la estructura "clientes_estructura.properties"
      When se llame al endpoint "/client/by-id" por el metodo "GET"
       And enviando los datos "idcliente"
      Then el codigo http del endpoint es "200"
