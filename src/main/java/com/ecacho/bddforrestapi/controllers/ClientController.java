@@ -18,7 +18,7 @@ public class ClientController {
     }
 
     @GetMapping("/by-id")
-    public BaseResponse getClient(@RequestParam int idClient){
+    public BaseResponse getClient(@RequestParam("idClient") int idClient){
         Optional<ClientModel> client = this.clientService.findById(idClient);
         if(client.isPresent()){
             return new BaseResponse(0, client);

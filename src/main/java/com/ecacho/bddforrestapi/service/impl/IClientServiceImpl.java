@@ -17,6 +17,7 @@ public class IClientServiceImpl implements IClientService {
 
         this.clients = new ArrayList<>();
         this.clients.add(new ClientModel(1, "edu", "dev", "Internet"));
+        this.clients.add(new ClientModel(2, "Steve", "dev", null));
     }
 
     @Override
